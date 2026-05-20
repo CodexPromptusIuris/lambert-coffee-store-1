@@ -98,3 +98,5 @@ Or use email instead of GitHub for Vercel login.
 ---
 
 **Questions?** All production files are ready. Just need to connect the GitHub repo to Vercel!
+
+<!-- Redeploy trigger: 2026-05-20 - actualizar contenido de despliegue -->

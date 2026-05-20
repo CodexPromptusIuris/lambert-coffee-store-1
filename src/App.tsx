@@ -44,7 +44,7 @@ const products: Product[] = [
     description: 'Un cafe amable, dulce y estable para espresso, moka y cafeteras automaticas.',
     roast: 'Medio',
     prices: { '250g': 8990, '500g': 15990, '1kg': 28990 },
-    image: '/assets/brasil-cerrado.svg',
+    image: '/assets/polaroid-1.jpg',
     flavors: ['Chocolate', 'Nuez', 'Dulce'],
   },
   {
@@ -55,7 +55,7 @@ const products: Product[] = [
     description: 'Perfil expresivo para filtrados y espresso moderno, con final limpio y dulce.',
     roast: 'Medio claro',
     prices: { '250g': 9990, '500g': 17990, '1kg': 32990 },
-    image: '/assets/colombia-huila.svg',
+    image: '/assets/polaroid-2.jpg',
     flavors: ['Frutos rojos', 'Caramelo', 'Acidez'],
   },
   {
@@ -66,7 +66,7 @@ const products: Product[] = [
     description: 'La mezcla Lambert para todos los dias: balance, crema y gran rendimiento.',
     roast: 'Medio alto',
     prices: { '250g': 9490, '500g': 16990, '1kg': 30990 },
-    image: '/assets/blend-casa.svg',
+    image: '/assets/polaroid-3.jpg',
     flavors: ['Cacao', 'Panela', 'Cremoso'],
   },
 ];
