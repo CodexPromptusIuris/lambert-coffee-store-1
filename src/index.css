@@ -242,6 +242,14 @@ h3 {
   position: relative;
 }
 
+.product-art img.product-image {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .product-art span {
   background: rgba(9, 7, 5, 0.72);
   border: 1px solid var(--line);
@@ -267,6 +275,21 @@ h3 {
 .profile {
   color: var(--gold) !important;
   font-weight: 700;
+}
+
+.flavor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.flavor-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: var(--cream);
+  font-size: 0.78rem;
+  padding: 6px 10px;
 }
 
 .format-grid {

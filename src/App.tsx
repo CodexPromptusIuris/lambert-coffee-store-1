@@ -19,6 +19,8 @@ type Product = {
   description: string;
   roast: string;
   prices: Record<string, number>;
+  image: string;
+  flavors: string[];
 };
 
 type CartItem = {
@@ -42,6 +44,8 @@ const products: Product[] = [
     description: 'Un cafe amable, dulce y estable para espresso, moka y cafeteras automaticas.',
     roast: 'Medio',
     prices: { '250g': 8990, '500g': 15990, '1kg': 28990 },
+    image: '/assets/brasil-cerrado.svg',
+    flavors: ['Chocolate', 'Nuez', 'Dulce'],
   },
   {
     id: 'colombia-huila',
@@ -51,6 +55,8 @@ const products: Product[] = [
     description: 'Perfil expresivo para filtrados y espresso moderno, con final limpio y dulce.',
     roast: 'Medio claro',
     prices: { '250g': 9990, '500g': 17990, '1kg': 32990 },
+    image: '/assets/colombia-huila.svg',
+    flavors: ['Frutos rojos', 'Caramelo', 'Acidez'],
   },
   {
     id: 'blend-casa',
@@ -60,6 +66,8 @@ const products: Product[] = [
     description: 'La mezcla Lambert para todos los dias: balance, crema y gran rendimiento.',
     roast: 'Medio alto',
     prices: { '250g': 9490, '500g': 16990, '1kg': 30990 },
+    image: '/assets/blend-casa.svg',
+    flavors: ['Cacao', 'Panela', 'Cremoso'],
   },
 ];
 
@@ -199,7 +207,7 @@ export default function App() {
           {products.map((product) => (
             <article className="product-card" key={product.id}>
               <div className="product-art">
-                <Coffee size={44} />
+                <img src={product.image} alt={product.name} className="product-image" />
                 <span>{product.roast}</span>
               </div>
               <div className="product-body">
@@ -207,6 +215,13 @@ export default function App() {
                 <h3>{product.name}</h3>
                 <p className="profile">{product.profile}</p>
                 <p>{product.description}</p>
+                <div className="flavor-tags">
+                  {product.flavors.map((flavor) => (
+                    <span key={flavor} className="flavor-tag">
+                      {flavor}
+                    </span>
+                  ))}
+                </div>
                 <div className="format-grid">
                   {Object.entries(product.prices).map(([format, price]) => (
                     <button key={format} type="button" onClick={() => addToCart(product.id, format)}>
